@@ -1,3 +1,11 @@
+import './style.scss';
+import Main from "./pages/Main/Main";
+
 export const App = () => {
-  return <h1>React template</h1>
+    return (
+        <div>
+            <h1>React template</h1>
+            <Main/>
+        </div>
+    )
 }
