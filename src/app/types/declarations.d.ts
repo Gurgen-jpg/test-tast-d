@@ -13,3 +13,6 @@ declare module '*.svg' {
     const SVG: React.VFC<React.SVGProps<SVGSVGElement>>;
     export default SVG;
 }
+
+type Reducer<State, Action> =
+    (state: State, action: Action) => State;

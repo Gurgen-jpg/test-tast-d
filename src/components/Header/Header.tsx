@@ -11,6 +11,7 @@ const Header = () => {
                 src={'https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_960_720.jpg'}
                 width="100%"
                 height="200px"
+
             />
             <div className={s.content}>
                 <Avatar/>

@@ -1,8 +1,18 @@
 .Picture {
+  background: var(--layout-bg);
+  &:hover {
+    background: var(--hover-bg);
+  }
+}
 
-
+.round {
+  border-radius: 50%;
 }
 
 .radius {
-  border-radius: 50%;
+  border-radius: 8px;
 }
+
+.contain {
+  object-fit: contain
+};

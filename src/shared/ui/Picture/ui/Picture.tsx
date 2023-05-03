@@ -2,13 +2,16 @@ import React, {FC} from 'react';
 import {classNames} from "../../../lib/classNames";
 import s from "./Picture.module.scss";
 
+
+
 type PicturePropsType = {
     src: string;
     alt?: string;
     width?: number;
     height?: number;
-    radius?: boolean;
+    round?: boolean;
     border?: boolean;
+    contain?: boolean;
 }
 
 const Picture: FC<PicturePropsType> = (props) => {
@@ -18,11 +21,15 @@ const Picture: FC<PicturePropsType> = (props) => {
         width,
         height,
         radius,
+        round,
+        contain
 
     } = props;
 
     const mods = {
-        [s['radius']] : radius
+        [s['round']] : round,
+        [s['radius']] : radius,
+        [s['contain']] : contain
     }
 
     return (
@@ -31,7 +38,7 @@ const Picture: FC<PicturePropsType> = (props) => {
             alt={alt}
             width={width}
             height={height}
-            className={classNames(s.Picture, mods, [])}
+            className={classNames(s.Picture, {...mods}, [])}
         />
     );
 };

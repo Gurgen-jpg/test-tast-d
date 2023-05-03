@@ -16,6 +16,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLInputElement> {
     size?: ButtonSize,
     color?: ButtonColor,
     children?: ReactNode,
+    disabled?: boolean,
 }
 
 const Button: FC<ButtonProps> = (props) => {
@@ -23,6 +24,7 @@ const Button: FC<ButtonProps> = (props) => {
         size = ButtonSize.MEDIUM,
         color = ButtonColor.PRIMARY,
         children,
+        disabled,
         ...otherProps
     } = props;
 
@@ -34,6 +36,7 @@ const Button: FC<ButtonProps> = (props) => {
     return (
         <button
             type="button"
+            disabled={disabled}
             className={classNames(s.Button, {...mods}, [])}
             {...otherProps}
         >
