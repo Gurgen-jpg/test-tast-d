@@ -1,0 +1,37 @@
+.Button {
+  cursor: pointer;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 9px 17px 9px 13px;
+  border: 1px solid #D1D5DB;
+
+
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  border-radius: 6px;
+
+  &:hover {
+    opacity: 0.8;
+    fill-opacity: 0.8;
+    stroke-opacity: 0.8;
+  }
+}
+
+.medium {
+  font-size: var(--font-size-m);
+}
+
+.large {
+  font-size: var(--font-size-l);
+}
+
+.primary {
+  background: var(--button-bg-primary);
+}
+
+.secondary {
+  background: var(--button-bg-secondary);
+  color: var(--button-color-secondary);
+}

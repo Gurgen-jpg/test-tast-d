@@ -1,0 +1,14 @@
+.Icon {
+  fill: var(--icon-color);
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
+.primary {
+  color: var(--button-color-primary);
+}

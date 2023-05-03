@@ -1,4 +1,22 @@
 .Header {
+  width: 100%;
   height: var(--header-height);
   position: relative;
+}
+.content {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  justify-content: space-evenly
+}
+
+@media screen and (max-width: 600px){
+  .content{
+    flex-direction: column;
+    gap: 20px;
+  }
 }

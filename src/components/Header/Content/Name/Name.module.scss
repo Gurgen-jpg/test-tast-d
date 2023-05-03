@@ -1,0 +1,14 @@
+.Name {
+  font-style: normal;
+  font-weight: 700;
+  font-size: var(--font-size-l);
+  line-height: var(--font-line-l);
+  color: var(--text-color-title);
+
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 1;
+}

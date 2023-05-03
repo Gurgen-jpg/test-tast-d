@@ -1,11 +1,29 @@
 :root {
-  --font-family-main: consolas, serif;
+  --font-family: 'Inter';
   --font-size-m: 16px;
-  --font-line-m: 24px;
+  --font-line-m: 20px;
 
   --font-size-l: 24px;
   --font-line-l: 32px;
 
   //size
   --header-height: 256px;
+
+  //colors
+  --button-color-primary: #374151;
+  --button-bg-primary:(0deg, #FFFFFF, #FFFFFF);
+  --button-bg-secondary: #4F46E5;
+  --button-color-secondary: #FFFFFF;
+  --icon-color:  #9CA3AF;
+
+  --text-color-secondary: #6B7280;
+  --text-color-primary: #374151;
+  --text-color-title: #111827;
+
+
+
+  // modal
+  --layout-bg: rgba(107, 114, 128, 0.75);
+
+
 }

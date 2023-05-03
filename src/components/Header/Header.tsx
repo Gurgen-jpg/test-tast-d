@@ -2,6 +2,7 @@ import React, {memo} from 'react';
 import Picture from "../../shared/ui/Picture/ui/Picture";
 import s from "./Header.module.scss";
 import Avatar from "./Content/Avatar/Avatar";
+import ButtonsBlock from "./Content/ButtonsBlock/ButtonsBlock";
 
 const Header = () => {
     return (
@@ -11,7 +12,10 @@ const Header = () => {
                 width="100%"
                 height="200px"
             />
-            <Avatar/>
+            <div className={s.content}>
+                <Avatar/>
+                <ButtonsBlock/>
+            </div>
         </div>
     );
 };
