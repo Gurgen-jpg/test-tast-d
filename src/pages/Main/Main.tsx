@@ -21,7 +21,7 @@ export type PhotoState = {
 
 const Main = () => {
 
-    const [open, setOpen] = useState(true);
+    const [open, setOpen] = useState(false);
     const [currentPhoto, setCurrentPhoto] = useState('');
     const [state, setState] = useState<MainState>({status: FetchingStatusType.IDLE,})
     const [photosState, setPhotosState] = useState<PhotoState>({
@@ -40,14 +40,23 @@ const Main = () => {
         fetchData();
     }, [])
 
+    const openComment = (photo: string) => {
+        setCurrentPhoto(photo);
+        setOpen(true);
+    }
+
+    const closeComment = () => {
+      setOpen(false);
+    }
+
     return (
         <div className={s.Main}>
             <Modal isOpen={open}>
-                <CommentPhoto photo={currentPhoto}/>
+                <CommentPhoto photo={currentPhoto} closeComment={closeComment}/>
             </Modal>
             <Header/>
-            <Categories categories={state?.message} setPhotos={setPhotosState}/>
-            <Photos state={photosState} setCurrentPhoto={setCurrentPhoto}/>
+            <Categories categories={state?.message} setPhotos={setPhotosState} />
+            <Photos state={photosState} setCurrentPhoto={openComment}/>
         </div>
     );
 };

@@ -7,13 +7,15 @@ import {FetchingStatusType} from "../../shared/types/types";
 
 
 type PropsType = {
-    photo: string
+    photo: string;
+    closeComment: () => void;
 }
 const CommentPhoto: FC<PropsType> = (props) => {
     const [status, setStatus] = useState<FetchingStatusType>(FetchingStatusType.IDLE)
     const [text, setText] = useState('')
     const {
         photo,
+        closeComment,
     } = props;
 
     const fetchComment = async () => {
@@ -22,6 +24,7 @@ const CommentPhoto: FC<PropsType> = (props) => {
             setTimeout(() => {
                 resolve(text)
                 setStatus(FetchingStatusType.SUCCESS)
+                closeComment();
             }, 2000)
         })
         console.log(promise)
