@@ -51,7 +51,7 @@ const Main = () => {
 
     return (
         <div className={s.Main}>
-            <Modal isOpen={open}>
+            <Modal isOpen={open} onClose={closeComment}>
                 <CommentPhoto photo={currentPhoto} closeComment={closeComment}/>
             </Modal>
             <Header/>
