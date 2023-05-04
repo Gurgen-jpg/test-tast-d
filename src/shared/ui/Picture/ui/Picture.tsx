@@ -12,6 +12,8 @@ type PicturePropsType = {
     round?: boolean;
     border?: boolean;
     contain?: boolean;
+    radiusMax?:boolean;
+    bg?: boolean;
 }
 
 const Picture: FC<PicturePropsType> = (props) => {
@@ -22,14 +24,18 @@ const Picture: FC<PicturePropsType> = (props) => {
         height,
         radius,
         round,
-        contain
+        contain,
+        radiusMax,
+        bg,
 
     } = props;
 
     const mods = {
         [s['round']] : round,
         [s['radius']] : radius,
-        [s['contain']] : contain
+        [s['radiusMax']] : radiusMax,
+        [s['contain']] : contain,
+        [s['bg']] : bg
     }
 
     return (

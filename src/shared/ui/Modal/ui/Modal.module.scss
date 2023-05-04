@@ -7,7 +7,6 @@
   opacity: 0;
   pointer-events: none;
   z-index: -1;
-  color: var(--colorShadow);
 }
 
 .overlay {
@@ -18,7 +17,7 @@
   justify-content: center;
 }
 .overlayBg {
-  background: var(--colorBox);
+  background: var(--layout-bg);
 }
 
 .content {
@@ -27,9 +26,8 @@
   background: var(--colorBox);
   transition: 0.3s transform;
   transform: scale(0.5);
-  /*min-width: 60%;*/
-  /*overflow: hidden;*/
-  /*overflow-y: scroll;*/
+  width: 698px;
+  height: 706px
 }
 
 
@@ -40,6 +38,7 @@
 }
 
 .contentOpened {
+  background: #fff;
   transform: scale(1);
 }
 

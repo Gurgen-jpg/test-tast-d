@@ -1,0 +1,20 @@
+.textArea {
+  width: 100%;
+  min-height: var(--text-form-heit);
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: var(--font-size-m);
+  line-height: var(--font-line-m);
+}
+
+.header {
+  color: var(--text-color-title);
+}
+
+.footer {
+ color: var(--text-color-secondary);
+}

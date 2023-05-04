@@ -1,5 +1,10 @@
 .Picture {
+  align-self: center;
+}
+
+.bg {
   background: var(--layout-bg);
+
   &:hover {
     background: var(--hover-bg);
   }
@@ -13,6 +18,12 @@
   border-radius: 8px;
 }
 
+.radiusMax {
+  border-radius: 24px;
+}
+
 .contain {
-  object-fit: contain
-};
+  object-fit: contain;
+}
+
+
